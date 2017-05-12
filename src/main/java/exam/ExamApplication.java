@@ -1,4 +1,4 @@
-package exam2017;
+package exam;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SuppressWarnings("checkstyle:HideUtilityClassConstructor")
 @SpringBootApplication
-public class Exam2017Application {
+public class ExamApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Exam2017Application.class, args);
+        SpringApplication.run(ExamApplication.class, args);
     }
 }
 
