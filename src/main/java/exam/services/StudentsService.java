@@ -13,17 +13,7 @@ import java.util.List;
  * @author  Valentin26
  */
 @Service
-/*
-public class StudentsService {
 
-    @Autowired
-    private StudentsMapper studentsMapper;
-
-    public List<StudentEntity> findAll() {
-        return this.studentsMapper.findAll();
-    }
-}
-*/
 public class StudentsService {
 
     @Autowired

@@ -20,20 +20,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/")
-/*
-public class StudentsController {
 
-    @Autowired
-    private StudentsService studentsService;
-
-    @RequestMapping("students")
-    public String list(Model model) {
-        final List<StudentEntity> students = studentsService.findAll();
-        model.addAttribute("students", students);
-        return "students";
-    }
-}
-*/
 
 public class StudentsController {
 

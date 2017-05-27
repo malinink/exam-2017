@@ -6,23 +6,7 @@ import lombok.*;
 /**
  * @author  Valentin26
  */
-/*
-@Data
 
-public class StudentEntity {
-
-    private Integer id;
-
-    private String firstName;
-
-    private String lastName;
-
-    private Integer group_id;
-
-    private Integer student_id;
-
-}
-*/
 
 @Data
 public class StudentEntity {

@@ -11,16 +11,7 @@ import java.util.List;
  * @author  Valentin26
  */
 
-/*
-public class GroupsService {
-    @Autowired
-    private GroupsMapper groupsMapper;
 
-    public List<GroupsEntity> findAll() {
-        return this.groupsMapper.findAll();
-    }
-}
-*/
 
 public class GroupsService {
     @Autowired

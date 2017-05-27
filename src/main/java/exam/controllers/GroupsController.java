@@ -18,29 +18,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/")
-/*
-public class GroupsController {
-  @Autowired
-    private GroupsMapper groupsMapper;
-    @Autowired
-    private StudentsMapper studentsMapper;
 
-    @RequestMapping("groups")
-    public String list(Model model) {
-        final List<GroupsEntity>
-              groups = groupsMapper.findAll();
-        model.addAttribute("groups", groups);
-        return "groups";
-    }
-    @RequestMapping("group/{groupId}")
-
-    public String read(Model model, @PathVariable("groupId") Integer groupId) {
-        final List<StudentEntity> students = studentsMapper.findByGroupId(groupId);
-        model.addAttribute("students", students);
-        return "students";
-    }
-}
-*/
 
 public class GroupsController {
     @Autowired

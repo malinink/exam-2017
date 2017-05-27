@@ -1,29 +1,5 @@
 
-/*
-public interface StudentsMapper {
-    @Results(
-            id = "Student",
-            value = {
-                    @Result(property = "id", column = "id"),
-                    @Result(property = "firstName", column = "first_name"),
-                    @Result(property = "lastName", column = "last_name"),
-                    @Result(property = "group_id", column = "group_id"),
-                    @Result(property = "student_id", column = "student_id"),
-            })
-    @Select("SELECT * FROM students")
-    List<StudentEntity> findAll();
 
-    @Insert("INSERT INTO students (first_name, last_name, surname, group_id, student_id) VALUES(#{firstName}, #{lastName}, #{group_id}, #{student_id})")
-    @Options(useGeneratedKeys = true, keyColumn = "id")
-    void insert(StudentEntity student);
-
-    @Update("UPDATE students SET first_name=#{firstName}, last_name=#{lastName}, group_id=#{group_id}, student_id=#{student_id}")
-    void update(StudentEntity student);
-
-    @Select("SELECT * FROM  students WHERE group_id=#{groupId}" )
-    List<StudentEntity> findByGroupId(Integer groupId);
-}
-*/
 
 package exam.mappers;
 
