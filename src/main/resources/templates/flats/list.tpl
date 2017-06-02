@@ -21,6 +21,7 @@ content: contents {
           td{a(href: '/flats'+'/'+flat.getId()) {yield "Show rooms"}}
         }
       }
+     td{a(href: '/flats-extended') {yield "Show extended list of flats"}}
 	
     }
   }
