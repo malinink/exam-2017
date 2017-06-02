@@ -20,7 +20,7 @@ public interface RoomMapper {
                     @Result(property = "adress", column = "adress")
             })
 
-    @Select("SELECT  FROM room WHERE flat_id = #{id} GROUP BY SQUARE")
+    @Select("SELECT square, function, isliving FROM room WHERE flat_id = (#{id}) ORDER BY room.square")
     List<Room> showRooms(int id);
 
 }
