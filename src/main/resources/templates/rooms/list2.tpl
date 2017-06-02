@@ -14,9 +14,9 @@ content: contents {
     tbody {
       rooms.each { room ->
         tr {
-          td(room.Square())
-          td(room.Function())
-          td(room.Isliving())
+          td(room.getSquare())
+          td(room.getFunction())
+          td(room.getIsliving())
           td{a(href: '/flats') {yield "Go back"}}
         }
       }
