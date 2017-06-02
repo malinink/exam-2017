@@ -1,7 +1,9 @@
 package exam;
 
 import exam.entities.Flat;
+import exam.entities.FlatExt;
 import exam.entities.Room;
+import exam.mappers.FlatExtMapper;
 import exam.mappers.FlatMapper;
 import exam.mappers.RoomMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,9 @@ public class Controllers {
     @Autowired
     private RoomMapper roomMapper;
 
+    @Autowired
+    private FlatExtMapper flatExtMapper;
+
     @RequestMapping("/flats")
     public String showAllFlats(Model model) {
         List<Flat> flats = flatMapper.findAll();
@@ -38,4 +43,16 @@ public class Controllers {
         model.addAttribute("rooms", rooms);
         return "rooms/list2";
     }
+
+    @RequestMapping("/flats-extended")
+    public String showAllFlatsExt(Model model) {
+        List<FlatExt> flats_e = flatExtMapper.findAll();
+        model.addAttribute("flats_e", flats_e);
+        return "flats_extended/list3";
+    }
+
+
+
+
+
 }
