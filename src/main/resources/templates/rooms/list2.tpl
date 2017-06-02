@@ -17,9 +17,9 @@ content: contents {
           td(room.getSquare())
           td(room.getFunction())
           td(room.getIsliving())
-          td{a(href: '/flats') {yield "Go back"}}
         }
       }
+      td{a(href: '/flats') {yield "Go back"}}
 	
     }
   }
