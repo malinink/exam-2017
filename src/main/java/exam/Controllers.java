@@ -38,5 +38,4 @@ public class Controllers {
         model.addAttribute("rooms", rooms);
         return "rooms/list2";
     }
-
 }
