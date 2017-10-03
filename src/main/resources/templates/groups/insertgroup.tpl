@@ -16,15 +16,27 @@ input (name:'last_name', id:'field_last_name', type:'text', class:'validate', va
 label (for:'field_last_name', 'Last_name')
 }
 }
+div (class:'row') {
+div (class:'input-field col s12') {
+input (name:'student_card', id:'field_student_card', type:'text', class:'validate', value:student.student_card)
+label (for:'field_student_card', 'Student_card')
+}
+}
 
+div (class:'row') {
+div (class:'input-field col s12') {
+input (name:'group_id', id:'field_group_id', type:'text', class:'validate', value:student.group_id)
+label (for:'field_group_id', 'Group_id')
+}
+}
 
 
 div (class:'row') {
 div (class:'input-field col s12') {
 
-select(name: 'studentId', id:'field_student', class:'browser-default'){
+select(name: 'groupId', id:'field_group', class:'browser-default'){
 students.each { student ->
-if(student.getId()==defaultStudentId) {
+if(student.getGroupId()==group.getId()) {
 option (value:student.getId(), 'selected': 'selected') { yield student.getFirst_name() }
 }
 else
