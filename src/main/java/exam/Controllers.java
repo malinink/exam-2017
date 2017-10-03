@@ -65,14 +65,14 @@ public class Controllers {
          return "students/studentlist";
      }
      */
-     @GetMapping("student/{studentId}/editgroup")
-     public String update(Model model, @PathVariable("studentId") Integer studentId) {
-         Student student = studentMapper.find(studentId);
+     @GetMapping("student/{groupId}/editgroup")
+     public String update(Model model, @PathVariable("groupId") Integer groupId) {
+         Student student = studentMapper.find(groupId);
          model.addAttribute("student", student);
          return "groups/insertgroup";
      }
 
-    @PostMapping("student/{studentId}/editgroup")
+    @PostMapping("student/{groupId}/editgroup")
     public String create(Student student,
                          Model model) {
         studentMapper.update(student);
