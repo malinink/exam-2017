@@ -7,7 +7,9 @@ import exam.mappers.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -41,11 +43,11 @@ public class Controllers {
         model.addAttribute("students", students);
         return "students/stud";
     }*/
-   @RequestMapping("/stud/{id}")
+   @RequestMapping("/groupinfo/{id}")
    public String showGroup(Model model,@PathVariable int id) {
        List<Group> group = studentMapper. findGroupByStudent(id);
-       model.addAttribute("stud",group);
-       return "students/stud";
+       model.addAttribute("group",group);
+       return "groups/groupinfo";
    }
 
     @RequestMapping("/students")
@@ -63,6 +65,18 @@ public class Controllers {
          return "students/studentlist";
      }
      */
+     @GetMapping("student/{studentId}/editgroup")
+     public String update(Model model, @PathVariable("studentId") Integer studentId) {
+         Student student = studentMapper.find(studentId);
+         model.addAttribute("student", student);
+         return "groups/insertgroup";
+     }
 
+    @PostMapping("student/{studentId}/editgroup")
+    public String create(Student student,
+                         Model model) {
+        studentMapper.update(student);
+        return "redirect:/student";
+    }
 }
 
